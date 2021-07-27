@@ -401,7 +401,7 @@ button:hover {
 		});
 	}
 	function openBackWindow(){
-		location.href="http://localhost:8080/nft-tracker/addProgram";
+		location.href="http://localhost:8080/nft-tracker/viewPrograms";
 	}
 	function openNextWindow() {
 		location.href = "http://localhost:8080/nft-tracker/professors";
@@ -417,7 +417,7 @@ button:hover {
 	}
 	%>
 	<div class="w3-top">
-		<div class="w3-bar w3-white w3-padding w3-card"
+		<div class="w3-bar w3-red w3-padding w3-card"
 			style="letter-spacing: 0px;">
 			<div id="mySidenav" class="sidenav">
 				<div class="logo-wrapper waves-light" style="margin-left: 30px;">
@@ -512,14 +512,14 @@ button:hover {
 					document.getElementById("mySidenav").style.display = "none";
 				}
 			</script>
-			<div class="w3-right w3-hide-small">
+			<div class="w3-right w3-red w3-hide-small">
 				<a href="${pageContext.request.contextPath}/home"
 					class="w3-bar-item w3-button"><i class="fa"
 					style="font-size: 16px; margin-right: 5px;"></i>Home</a><a href="#"
 					class="w3-bar-item w3-button"><i class="fa fa-user"
 					style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
 				<div class="dropdown">
-					<div>
+					<div style="color: white">
 						<a href="${pageContext.request.contextPath}/performLogout"
 							class="w3-bar-item w3-button"><i class="fa"
 							style="font-size: 16px; margin-right: 5px;"></i>Logout</a> <br>
@@ -554,19 +554,20 @@ button:hover {
 											value="${program.programCode} : ${program.programName}" /></option>
 								</c:forEach>
 							</select> <br>
+
 						</div>
 						<div
 							style="width: 500px; margin: 10px auto; align-content: center;">
 							Select a Level : <select required="required" id="programLevelId">
-							</select> <br>
+							</select>
+							<button type="button" onclick="validateCreateTermForm()"; style="margin-right: -300px; position: relative">Select</button>
 						</div>
 
 					</div>
 				</div>
 				<div class="btn-block">
-					<button type="button" onclick="openBackWindow()">Back</button>
-					<button type="button" onclick="validateMandateFormParameters()">Select</button>
-					<button type="button" onclick="openNextWindow()">Next</button>
+					<button type="button" style="margin-right: 300px" onclick="openBackWindow()">Back</button>
+					<button type="button" style= "margin-left: auto" onclick="openNextWindow()">Next - Faculty</button>
 
 					<br>
 				</div>
