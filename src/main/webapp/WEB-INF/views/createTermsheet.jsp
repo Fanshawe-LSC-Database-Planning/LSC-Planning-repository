@@ -450,14 +450,14 @@
 				document.getElementById("mySidenav").style.display = "none";
 			}
 		</script>
-		<div class="w3-right w3-hide-small">
+		<div class="w3-right w3-red w3-hide-small">
 			<a href="${pageContext.request.contextPath}/home"
 			   class="w3-bar-item w3-button"><i class="fa"
 												style="font-size: 16px; margin-right: 5px;"></i>Home</a><a href="#"
 																										   class="w3-bar-item w3-button"><i class="fa fa-user"
 																																			style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
 			<div class="dropdown">
-				<div>
+				<div style="color: white">
 					<a href="${pageContext.request.contextPath}/performLogout"
 					   class="w3-bar-item w3-button"><i class="fa"
 														style="font-size: 16px; margin-right: 5px;"></i>Logout</a> <br>
@@ -487,7 +487,7 @@
 
 					<div style="width: 500px; margin: 10px auto;">
 
-						<label for="termSheetName" style="margin-left: 60px;">Term:</label>
+						<label for="termSheetName" style="margin-left: auto;">Term:</label>
 						<form:select path="termName" required="required">
 							<option value=""></option>
 							<c:forEach var="term" items="${terms}">
@@ -499,25 +499,27 @@
 
 					<br>
 					<div style="width: 500px; margin: 10px auto;">
-						<label for="termSheetName" style="margin-left: 60px;">Enter
+						<label for="termSheetName" style="margin-left: auto;">Enter
 							Term sheet name:</label>
 						<form:input id="termSheetName" path="termSheetName"
 									name="termSheetName" />
+						<button
+
+								type="button" onclick="validateSheetNameAndSubmitForm()"; style="margin-right: -300px; position: relative">Create
+							TermSheet</button>
+
 					</div>
 				</div>
 			</div>
 
 			<div class="btn-block">
 				<button
-						style="color: white;margin: auto"
+						style="color: white;margin-right: 250px"
 						type="button" onclick="openBackWindow()">Back</button>
+
 				<button
-						style="color: white; margin:auto"
-						type="button" onclick="validateSheetNameAndSubmitForm()">Create
-					TermSheet</button>
-				<button
-						style="color: white;margin: auto"
-						type="button" onclick="openNextWindow()">Next</button>
+						style="color: white;margin-left: auto"
+						type="button" onclick="openNextWindow()">Next - Add Program</button>
 			</div>
 			<p style="color: red;" id="message">${message}</p>
 		</form:form>

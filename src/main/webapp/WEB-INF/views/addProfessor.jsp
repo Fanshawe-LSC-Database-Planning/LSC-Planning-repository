@@ -460,7 +460,7 @@ button:hover {
 					document.getElementById("mySidenav").style.display = "none";
 				}
 			</script>
-			<div class="w3-right w3-hide-small">
+			<div class="w3-right w3-red w3-hide-small">
 				<a href="${pageContext.request.contextPath}/home"
 					class="w3-bar-item w3-button"><i class="fa"
 					style="font-size: 16px; margin-right: 5px; color: white;"></i>Home</a>
@@ -468,7 +468,7 @@ button:hover {
 					class="w3-bar-item w3-button"><i class="fa fa-user"
 					style="font-size: 16px; margin-right: 5px; color: white;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
 				<div class="dropdown">
-					<div>
+					<div style="color: white">
 						<a href="${pageContext.request.contextPath}/performLogout"
 							class="w3-bar-item w3-button"><i class="fa"
 							style="font-size: 16px; margin-right: 5px; color: white;"></i>Logout</a> <br>
@@ -562,10 +562,11 @@ button:hover {
 				</fieldset>
 				<div class="btn-block">
 
-					<button style="margin: auto" type="button" onclick="validateMandateFormParameters()">Save</button>
 					<button type="button" onclick="clearAllForm()"
-						style="margin:auto">Clear All Fields</button>
-					<button style="margin: auto" type="button" onclick="openNextWindow()">Next</button>
+						style="margin-right:100px">Clear All Fields</button>
+					<button style="position: center" type="button" onclick="validateMandateFormParameters()">Save</button>
+
+					<button style="margin-left:100px" type="button" onclick="openNextWindow()">Next - Add Term</button>
 
 					<br>
 					<%

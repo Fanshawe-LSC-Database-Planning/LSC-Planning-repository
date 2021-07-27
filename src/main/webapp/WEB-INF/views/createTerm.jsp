@@ -341,7 +341,7 @@ button {
 	padding: 10px;
 	border: none;
 	border-radius: 5px;
-	background: #921d1d;
+	background: darkred;
 	font-size: 16px;
 	color: #fff;
 	cursor: pointer;
@@ -400,7 +400,7 @@ button:hover {
 	%>
 	<div class="w3-top">
 		<div class="w3-bar w3-red w3-padding w3-card"
-			style="letter-spacing: 0px;">
+			style="letter-spacing: 0px">
 			<div id="mySidenav" class="sidenav">
 				<div class="logo-wrapper waves-light" style="margin-left: 30px;">
 					<img src="nav_bar_logo.png" />
@@ -495,14 +495,14 @@ button:hover {
 				}
 
 			</script>
-			<div class="w3-right w3-hide-small">
+			<div class="w3-right w3-red w3-hide-small">
 				<a href="${pageContext.request.contextPath}/home"
 					class="w3-bar-item w3-button"><i class="fa"
 					style="font-size: 16px; margin-right: 5px;"></i>Home</a><a href="#"
 					class="w3-bar-item w3-button"><i class="fa fa-user"
 					style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
 				<div class="dropdown">
-					<div>
+					<div style="color: white">
 						<a href="${pageContext.request.contextPath}/performLogout"
 							class="w3-bar-item w3-button"><i class="fa"
 							style="font-size: 16px; margin-right: 5px;"></i>Logout</a> <br>
@@ -530,19 +530,19 @@ button:hover {
 					<div class="city-item">
 
 						<div style="width: 500px; margin: 10px auto;">
-							<label for="termName" style="margin-left: 60px;"><b>Please
+							<label for="termName" style="margin-left: auto;"><b>Please
 									enter term name:</b></label>
 							<form:input path="termName" id="termName" />
+							<button type="button" onclick="validateCreateTermForm()"; style="margin-right: -300px; position: relative">Create
+								Term</button>
 							<br> <br>
 						</div>
 					</div>
 				</div>
 
 				<div class="btn-block">
-					<button style="right: auto" type="button" onclick="openBackWindow()">Back</button>
-					<button type="button" onclick="validateCreateTermForm()">Create
-						Term</button>
-					<button style="right: auto" type="button" onclick="openNextWindow()">Next</button>
+					<button style="margin-right: 200px" type="button" onclick="openBackWindow()">Back</button>
+					<button style= "margin-left: auto; width:200px" type="button" onclick="openNextWindow()">Next - Create Term Sheet</button>
 
 
 				</div>

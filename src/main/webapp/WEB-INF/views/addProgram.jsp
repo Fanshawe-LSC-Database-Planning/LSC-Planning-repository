@@ -497,14 +497,14 @@ button:hover {
 					document.getElementById("mySidenav").style.display = "none";
 				}
 			</script>
-			<div class="w3-right w3-hide-small">
+			<div class="w3-right w3-red w3-hide-small">
 				<a href="${pageContext.request.contextPath}/home"
 					class="w3-bar-item w3-button"><i class="fa"
 					style="font-size: 16px; margin-right: 5px;"></i>Home</a><a href="#"
 					class="w3-bar-item w3-button"><i class="fa fa-user"
 					style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
 				<div class="dropdown">
-					<div>
+					<div style="color: white">
 						<a href="${pageContext.request.contextPath}/performLogout"
 							class="w3-bar-item w3-button"><i class="fa"
 							style="font-size: 16px; margin-right: 5px;"></i>Logout</a> <br>
@@ -536,7 +536,7 @@ button:hover {
 
 						<div style="width: 500px; margin: 10px auto;">
 							<form:label path="programName">Program Name:<label
-									style="color: red; margin-left: 60px;">*</label>
+									style="color: red; margin-left: auto;">*</label>
 							</form:label>
 							<form:input path="programName" id="programName" />
 
@@ -545,16 +545,17 @@ button:hover {
 						<br>
 						<div style="width: 500px; margin: 10px auto;">
 							<form:label path="programCode">Program Code:<label
-									style="color: red; margin-left: 60px;">*</label>
+									style="color: red; margin-left: auto;">*</label>
 							</form:label>
 							<form:input path="programCode" id="programCode" />
+							<button type="button" onclick="validateCreateTermForm()"; style="margin-right: -300px; position: relative">Save</button>
+
 						</div>
 					</div>
 				</div>
 				<div class="btn-block">
-					<button style="right: auto" type="button" onclick="openBackWindow()">Back</button>
-					<button type="button" onclick="validateMandateFormParameters()">Save</button>
-					<button style="right: auto" type="button" onclick="openNextWindow()">Next</button>
+					<button style="margin-right: 250px" type="button" onclick="openBackWindow()">Back</button>
+					<button style="margin-left: auto" type="button" onclick="openNextWindow()">Next - Select Program</button>
 					<br> <label style="color: red;" id="message">${message}</label>
 				</div>
 			</form:form>
