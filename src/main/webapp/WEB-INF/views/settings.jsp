@@ -23,6 +23,7 @@
 	<style>
 		body {
 			font-family: "Lato", sans-serif;
+			background: fixed;
 		}
 
 		.sidenav {
@@ -529,14 +530,17 @@
 				document.getElementById("mySidenav").style.display = "none";
 			}
 		</script>
-		<div class="w3-right w3-hide-small">
+		<div class="w3-right w3-red w3-hide-small">
 			<a href="${pageContext.request.contextPath}/home"
 			   class="w3-bar-item w3-button"><i class="fa"
-												style="font-size: 16px; margin-right: 5px;"></i>Home</a><a href="#"
-																										   class="w3-bar-item w3-button"><i class="fa fa-user"
-																																			style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
+												style="font-size: 16px; margin-right: 5px;"></i>Home</a>
+			<a href="#"
+			   class="w3-bar-item w3-button"><i class="fa fa-user" style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
+			<a href="${pageContext.request.contextPath}	/manageUser"
+			   class="w3-bar-item w3-button"><i class="fa"
+												style="font-size: 16px; margin-right: 5px;"></i>Manage Users</a>
 			<div class="dropdown">
-				<div>
+				<div style="color: white">
 					<a href="${pageContext.request.contextPath}/performLogout"
 					   class="w3-bar-item w3-button"><i class="fa"
 														style="font-size: 16px; margin-right: 5px;"></i>Logout</a> <br>
@@ -602,7 +606,7 @@
 				<button type="button" onclick="saveSettings()">Save</button>
 				<br> <br> <b><label style="color: red;">
 				${message}</label></b>
-			</div>
+			</div
 		</form>
 
 	</div>
