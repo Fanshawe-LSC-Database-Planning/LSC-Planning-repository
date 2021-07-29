@@ -16,6 +16,32 @@
 body {
 	font-family: "Lato", sans-serif;
 }
+ul.breadcrumb {
+	list-style: none ;
+	background-color: transparent;
+	position: fixed;
+	margin-left: 40px;
+	margin-top: 5px;
+
+}
+ul.breadcrumb li {
+	display: inline;
+	font-size: 15px;
+}
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: "/\00a0";
+}
+ul.breadcrumb li a {
+	color: white;
+	text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
 
 .sidenav {
 	display: none;
@@ -371,6 +397,18 @@ button:hover {
 	<div class="w3-top">
 		<div class="w3-bar w3-red w3-padding w3-card"
 			style="letter-spacing: 0px;">
+			<div style="color:white" class="w3-centre">
+				<ul class="breadcrumb">
+					<li><a href="http://localhost:8080/nft-tracker/home">Home</a></li>
+					<li><a href="http://localhost:8080/nft-tracker/createProfessor">Add Faculty</a></li>
+					<li><a href="http://localhost:8080/nft-tracker/addTerm">Create Term</a></li>
+					<li><a href="http://localhost:8080/nft-tracker/termsForCreatingTermSheet">Create Termsheet</a></li>
+					<li><a href="http://localhost:8080/nft-tracker/addProgram">Add Program</a></li>
+					<li><a href="http://localhost:8080/nft-tracker/viewPrograms">Select Program</a></li>
+					<li><a href="http://localhost:8080/nft-tracker/viewProgramLevels">Select Level</a></li>
+					<br>
+					<li>Select Faculty</li>
+				</ul></div>
 			<div id="mySidenav" class="sidenav">
 				<div class="logo-wrapper waves-light" style="margin-left: 30px;">
 					<img src="nav_bar_logo.png" />

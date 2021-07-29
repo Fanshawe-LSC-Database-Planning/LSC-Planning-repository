@@ -11,21 +11,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Arrays;
 
-@RestController
+@Controller
 
 public class ManageUserUI {
 
         @Autowired
         private ManageUserService userService;
 
-    @RequestMapping("/manageUser")
-    public ModelAndView registerPage() {
-        ModelAndView model = new ModelAndView("manageUser");
-        model.addObject("User", new ManageUserRequest());
-        return model;
-    }
         @GetMapping("/createUser")
-        public ModelAndView addUser () {
+        public ModelAndView addUser() {
             ModelAndView model = new ModelAndView("manageUser");
             if (!model.isEmpty())
                 model.addObject("User", new ManageUserRequest());

@@ -536,7 +536,7 @@
 												style="font-size: 16px; margin-right: 5px;"></i>Home</a>
 			<a href="#"
 			   class="w3-bar-item w3-button"><i class="fa fa-user" style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
-			<a href="${pageContext.request.contextPath}	/manageUser"
+			<a href="${pageContext.request.contextPath}	/createUser"
 			   class="w3-bar-item w3-button"><i class="fa"
 												style="font-size: 16px; margin-right: 5px;"></i>Manage Users</a>
 			<div class="dropdown">

@@ -471,14 +471,14 @@
 
     <div class="testbox">
         <form:form method="POST" action="createUserInSystem"
-                   modelAttribute="user" name="addUserForm" id="addUserForm"
+                   modelAttribute="User" name="addUserForm" id="addUserForm"
                    style="width:60%;letter-spacing:0px;">
             <div class="banner">
-                <h1>Add a Faculty</h1>
+                <h1>Add a User</h1>
             </div>
             <br />
             <fieldset>
-                <legend>Faculty Details</legend>
+                <legend>User Details</legend>
                 <div class="item">
                     <form:label path="username">Username<span>*</span>
                     </form:label>
