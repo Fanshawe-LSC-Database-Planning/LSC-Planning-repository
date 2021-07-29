@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity(name = "apiuser")
+@Entity(name = "apiUser")
 public class ApiUser {
 
 	@Id

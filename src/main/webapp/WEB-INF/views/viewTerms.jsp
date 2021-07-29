@@ -388,7 +388,7 @@ button:hover {
 	}
 	%>
 	<div class="w3-top">
-		<div class="w3-bar w3-white w3-padding w3-card"
+		<div class="w3-bar w3-red w3-padding w3-card"
 			style="letter-spacing: 0px;">
 			<div id="mySidenav" class="sidenav">
 				<div class="logo-wrapper waves-light" style="margin-left: 30px;">
@@ -483,14 +483,14 @@ button:hover {
 					document.getElementById("mySidenav").style.display = "none";
 				}
 			</script>
-			<div class="w3-right w3-hide-small">
+			<div class="w3-right w3-red w3-hide-small">
 				<a href="${pageContext.request.contextPath}/home"
 					class="w3-bar-item w3-button"><i class="fa"
 					style="font-size: 16px; margin-right: 5px;"></i>Home</a><a href="#"
 					class="w3-bar-item w3-button"><i class="fa fa-user"
 					style="font-size: 16px; margin-right: 5px;"></i>Welcome <%=request.getSession().getAttribute("username")%></a>
 				<div class="dropdown">
-					<div>
+					<div style="color: white">
 						<a href="${pageContext.request.contextPath}/performLogout"
 							class="w3-bar-item w3-button"><i class="fa"
 							style="font-size: 16px; margin-right: 5px;"></i>Logout</a> <br>
