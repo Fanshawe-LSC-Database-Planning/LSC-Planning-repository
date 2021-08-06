@@ -12,7 +12,7 @@ import java.util.List;
 public class ManageUserServiceImpl implements ManageUserService {
     ManageUserDao userDao;
     @Override
-    public ManagerUserResponse addUser(List<ManageUserRequest> manageUser) {
+    public ManagerUserResponse addUser(ManageUserRequest manageUser) {
         ManagerUserResponse response = new ManagerUserResponse();
         try {
             response = userDao.addUser(manageUser);
@@ -21,17 +21,7 @@ public class ManageUserServiceImpl implements ManageUserService {
         }
         return response;    }
 
-    @Override
-    public ManagerUserResponse getUser() {
 
-        ManagerUserResponse response = new ManagerUserResponse();
-        try {
-            response = userDao.getUser();
-        } catch (Exception e) {
-            ApplicationHelper.configureFailureResponseWithException(response, e.getMessage(), e);
-        }
-        return response;
-    }
 
     @Override
     public ManagerUserResponse getUser(String username) {
@@ -44,7 +34,7 @@ public class ManageUserServiceImpl implements ManageUserService {
         return response;
     }
 
-    @Override
+   /* @Override
     public ManagerUserResponse deleteUser(String username) {
         ManagerUserResponse response = new ManagerUserResponse();
         try {
@@ -53,7 +43,7 @@ public class ManageUserServiceImpl implements ManageUserService {
             ApplicationHelper.configureFailureResponseWithException(response, e.getMessage(), e);
         }
         return response;
-    }
+    }*/
 }
 
 

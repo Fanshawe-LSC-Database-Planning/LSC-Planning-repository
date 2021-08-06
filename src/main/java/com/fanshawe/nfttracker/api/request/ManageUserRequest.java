@@ -1,9 +1,6 @@
 package com.fanshawe.nfttracker.api.request;
 
-import com.fanshawe.nfttracker.api.entities.Course;
-import io.jsonwebtoken.lang.Strings;
 
-import java.util.List;
 
 public class ManageUserRequest {
 
@@ -26,12 +23,7 @@ public class ManageUserRequest {
 
     public void setPassword(String password) { this.password = password;
     }
-    public Boolean validateMandatoryParameters() {
-        if (Strings.hasText(getUsername()) && Strings.hasText(getPassword())) {
-            return true;
-        }
-        return false;
-    }
+
 
     @Override
     public String toString() {

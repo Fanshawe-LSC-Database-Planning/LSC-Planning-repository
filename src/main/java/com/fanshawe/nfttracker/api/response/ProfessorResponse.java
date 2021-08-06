@@ -6,7 +6,7 @@ import java.util.List;
 import com.fanshawe.nfttracker.api.entities.Professor;
 
 /**
- * @author Raman.Ahuja
+ * @author Simarjeet.Singh.Johar
  *
  *         Class to get a response to the api for user CRUD operations
  *

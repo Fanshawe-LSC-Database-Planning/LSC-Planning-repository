@@ -408,6 +408,7 @@ button:hover {
 			alert('Please fill all the mandatory parameters!');
 		} else {
 			document.getElementById("addProgramForm").submit();
+			alert('saved');
 		}
 	}
 	function openNextWindow(){
@@ -582,7 +583,7 @@ button:hover {
 									style="color: red; margin-left: auto;">*</label>
 							</form:label>
 							<form:input path="programCode" id="programCode" />
-							<button type="button" onclick="validateCreateTermForm()"; style="margin-right: -300px; position: relative">Save</button>
+							<button type="button" onclick="validateMandateFormParameters()" style="margin-right: -300px; position: relative">Save</button>
 
 						</div>
 					</div>

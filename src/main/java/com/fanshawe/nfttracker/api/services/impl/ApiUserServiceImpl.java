@@ -3,12 +3,13 @@ package com.fanshawe.nfttracker.api.services.impl;
 import java.util.Date;
 import java.util.Optional;
 
+import com.fanshawe.nfttracker.api.entities.ApiUser;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.fanshawe.nfttracker.api.entities.ApiUser;
+
 import com.fanshawe.nfttracker.api.repositories.ApiUserRepository;
 import com.fanshawe.nfttracker.api.request.ApiUserRequest;
 import com.fanshawe.nfttracker.api.response.ApiUserResponse;
@@ -33,7 +34,7 @@ public class ApiUserServiceImpl implements ApiUserService {
 
 	@Override
 	public ApiUserResponse createUser(ApiUserRequest apiUserRequest) {
-		ApiUser userEntity = new ApiUser();
+		 ApiUser userEntity = new ApiUser();
 		BeanUtils.copyProperties(apiUserRequest, userEntity);
 		userEntity.setDateUserAdded(new Date());
 		userEntity.setUserId(passwordEncoder.encode(apiUserRequest.getUsername()));

@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
 @Controller
@@ -18,20 +19,21 @@ public class ManageUserUI {
         @Autowired
         private ManageUserService userService;
 
+
         @GetMapping("/createUser")
         public ModelAndView addUser() {
             ModelAndView model = new ModelAndView("manageUser");
             if (!model.isEmpty())
-                model.addObject("User", new ManageUserRequest());
+                model.addObject("user", new ManageUserRequest());
             return model;
 
         }
 
 
-        @PostMapping("/createUserInSystem")
+        @PostMapping  ("/createUserInSystem")
         @ResponseBody
-        public ModelAndView addUserToDB(@ModelAttribute("User") ManageUserRequest manageUser, BindingResult result,
-                ModelAndView model){
+        public ModelAndView addUserToDB(@ModelAttribute("user") ManageUserRequest manageUser, BindingResult result,
+                ModelAndView model, HttpServletRequest req){
             ModelAndView model1 = new ModelAndView("manageUser");
             if (result.hasErrors()) {
                 result.getAllErrors().forEach(error -> {
@@ -39,8 +41,8 @@ public class ManageUserUI {
                 return new ModelAndView("error");
             }
             ManagerUserResponse response = new ManagerUserResponse();
-            response = userService.addUser(Arrays.asList(manageUser));
-            model1.addObject("User", new ManageUserRequest());
+            response = userService.addUser(manageUser);
+            model1.addObject("user", new ManageUserRequest());
 
             model1.addObject("message", response.getMessage());
             model1.setViewName("manageUser");

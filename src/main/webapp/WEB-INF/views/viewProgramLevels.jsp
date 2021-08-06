@@ -595,7 +595,7 @@ button:hover {
 							style="width: 500px; margin: 10px auto; align-content: center;">
 							Select a Level : <select required="required" id="programLevelId">
 							</select>
-							<button type="button" onclick="validateCreateTermForm()"; style="margin-right: -300px; position: relative">Select</button>
+							<button type="button" onclick="validateMandateFormParameters()"; style="margin-right: -300px; position: relative">Select</button>
 						</div>
 
 					</div>

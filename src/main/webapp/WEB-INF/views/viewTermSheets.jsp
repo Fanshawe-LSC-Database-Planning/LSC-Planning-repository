@@ -56,13 +56,13 @@
 		.sidenav {
 			display: none;
 			height: 100%;
-			width: 250px;
+			width: 330px;
 			height: 1000px;
 			position: fixed;
 			z-index: 1;
 			top: 0;
 			left: 0;
-			background-color: white;
+			background-color: lightcyan;
 			overflow-x: hidden;
 			padding-top: 60px;
 		}
@@ -73,6 +73,7 @@
 			font-size: 16px;
 			color: black;
 			display: block;
+			width: 200px;
 		}
 
 		.sidenav a:hover {
@@ -82,7 +83,7 @@
 		.sidenav .closebtn {
 			position: absolute;
 			top: 0;
-			right: 25px;
+			right: -125px;
 			font-size: 20px;
 			margin-left: 50px;
 		}
@@ -116,6 +117,8 @@
 			min-width: 170px;
 			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 			z-index: 1;
+			left: 150px;
+			top: 10px;
 		}
 
 		.dropdown-content a {
@@ -123,6 +126,8 @@
 			padding: 12px 16px;
 			text-decoration: none;
 			display: block;
+			width: 177px;
+
 		}
 
 		.dropdown-content a:hover {

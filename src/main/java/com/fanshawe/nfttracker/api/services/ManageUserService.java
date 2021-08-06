@@ -14,14 +14,13 @@ public interface ManageUserService {
 
 
 
-        public ManagerUserResponse addUser(List<ManageUserRequest> manageUser);
+        public ManagerUserResponse addUser(ManageUserRequest manageUser);
 
-        public ManagerUserResponse getUser();
 
         public ManagerUserResponse getUser(String username);
 
 
-        public ManagerUserResponse deleteUser(String username);
+       /* public ManagerUserResponse deleteUser(String username);*/
 
 
 

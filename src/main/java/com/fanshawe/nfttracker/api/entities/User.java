@@ -1,18 +1,19 @@
 package com.fanshawe.nfttracker.api.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.jsonwebtoken.lang.Strings;
+import java.util.Date;
 
 import javax.persistence.*;
-import java.util.Date;
-@Entity
-@Table(name = "user" )
+
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
-    private long id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private String username;
@@ -30,10 +31,11 @@ public class User {
     public Date getDateUserAdded() {
         return dateUserAdded;
     }
-
-    public void setDateUserAdded(Date dateUserAdded) {
+    public Date setDateUserAdded(Date dateUserAdded) {
         this.dateUserAdded = dateUserAdded;
+        return dateUserAdded;
     }
+
 
     public long getId() {
         return id;

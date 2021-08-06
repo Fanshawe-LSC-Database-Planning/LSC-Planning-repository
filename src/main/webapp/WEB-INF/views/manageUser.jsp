@@ -319,8 +319,7 @@
     </style>
     <script>
         function Save() {
-            document.getElementById('username').value = '';
-            document.getElementById('password').value = '';
+
             document.getElementById("addUserForm").submit();
             alert('Saved Successfully');
 
@@ -470,8 +469,8 @@
         style="max-width: 1600px; min-width: 500px" id="home">
 
     <div class="testbox">
-        <form:form method="POST" action="createUserInSystem"
-                   modelAttribute="User" name="addUserForm" id="addUserForm"
+        <form:form method="GET" action="/createUserInSystem"
+                   modelAttribute="user" name="addUserForm" id="addUserForm"
                    style="width:60%;letter-spacing:0px;">
             <div class="banner">
                 <h1>Add a User</h1>
@@ -497,7 +496,7 @@
 
                 <button type="button" onclick="clearAllForm()"
                         style="margin-right:100px">Clear All Fields</button>
-                <button style="position: center" type="button" onclick="Save()">Save</button>
+                <button style="position: center" type="submit" onclick="Save()">Save</button>
 
                 <button style="margin-left:100px" type="button" onclick="openNextWindow()">Next - Add Term</button>
 

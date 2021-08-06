@@ -9,13 +9,14 @@ import java.util.List;
 
 public interface ManageUserDao {
 
-    public ManagerUserResponse addUser(List<ManageUserRequest> manageUser) throws Exception;
+  /*  public ManagerUserResponse addUser(List<ManageUserRequest> manageUser) throws Exception;*/
 
-    public ManagerUserResponse getUser();
+    ManagerUserResponse addUser(ManageUserRequest manageUser) throws Exception;
+
 
     public ManagerUserResponse getUser(String username);
 
 
-    public ManagerUserResponse deleteUser(String username);
+    /*public ManagerUserResponse deleteUser(String username);*/
 
 }
