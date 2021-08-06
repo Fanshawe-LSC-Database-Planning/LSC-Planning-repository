@@ -341,6 +341,25 @@ button:hover {
 	}
 }
 </style>
+
+	<script>
+
+		jQuery(document).ready(function(){
+			var inputs = jQuery("form input").get()
+
+			jQuery("form").on("keydown", "input", function(e) {
+				if (e.key === "Enter") {
+					var which = inputs.indexOf(this),
+							next = inputs[which + 1];
+					if (next) {
+						next.focus()
+						//next.parentElement.scrollIntoView({behavior: "smooth"})
+					}
+				}
+
+			});
+		});
+
 <script>
 	function clearAllForm() {
 		document.getElementById('firstName').value = '';
