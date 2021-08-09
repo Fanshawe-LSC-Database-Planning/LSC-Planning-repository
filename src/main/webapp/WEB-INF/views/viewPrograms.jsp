@@ -565,14 +565,14 @@ button:hover {
 											value="${program.programCode} : ${program.programName}" /></option>
 								</c:forEach>
 							</form:select>
-							<button type="button" onclick="validateMandateFormParameters()"; style="margin-right: -300px; position: relative">Select</button>
+							<button type="button" onclick="validateMandateFormParameters()" style="margin-right: -300px; position: relative">Select</button>
 
 						</div>
 					</div>
 				</div>
 				<div class="btn-block">
 					<button type="button" onclick="openBackWindow()" style="margin-right:250px ">Back</button>
-					<button type="button" onclick="openNextWindow()" style="width: 250px">Next - Select Program Level</button>
+					<button type="button" onclick="openNextWindow()" style="width: 230px">Next - Select Program Level</button>
 					<br> <label id="programDeletionMessage" style="color: red;">${programDeletionMessage}</label>
 				</div>
 			</form:form>

@@ -1,5 +1,6 @@
 package com.fanshawe.nfttracker.api.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.*;

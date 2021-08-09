@@ -601,7 +601,7 @@ button:hover {
 					</div>
 				</div>
 				<div class="btn-block">
-					<button type="button" style="margin-right: 300px" onclick="openBackWindow()">Back</button>
+					<button type="button" style="margin-right: 230px" onclick="openBackWindow()">Back</button>
 					<button type="button" style= "margin-left: auto" onclick="openNextWindow()">Next - Faculty</button>
 
 					<br>

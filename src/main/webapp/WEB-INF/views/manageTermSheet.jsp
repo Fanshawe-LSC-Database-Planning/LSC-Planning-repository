@@ -151,7 +151,7 @@ button:hover {
 </script>
 </head>
 <body
-	style="background-image:url('day-planner-828611_1920.jpg'); background-attachment:fixed;margin-top: 10px; margin-right: 10px; margin-left: 10px; text-align: center; border-style: solid; border-width: 1px; border-left-width: 3px; border-right-width: 3px; border-color: #e6e6e6;">
+	style="background-attachment:fixed;margin-top: 10px; margin-right: 10px; margin-left: 10px; text-align: center; border-style: solid; border-width: 1px; border-left-width: 3px; border-right-width: 3px; border-color: #e6e6e6;">
 	<%
 		if (session.getAttribute("userId") == null && session.getAttribute("username") == null) {
 		response.sendRedirect("endSession");
