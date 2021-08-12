@@ -265,7 +265,7 @@ body {
 	<header class="w3-display-container w3-content w3-wide"
 		style="	max-width: 1600px; min-width: 500px" id="home">
 		<img class="w3-image"
-			src="https://lh3.googleusercontent.com/zQhMHFsLkGiTM5qZxBEVU-ksHsFl2dd4KaXjTIrUDNvELtKWrTxsZablq5UuMW1CTjPgXzaZTiUjCon-C6JLFi_tBddiqBi4giJoeD3ssHqIBYznfzmMARUEjCAWrUhoiNfMDFXE3g=w2400"
+			src="https://media-exp1.licdn.com/dms/image/C4D1BAQGa6V13KIJL_A/company-background_10000/0/1617115889131?e=2159024400&v=beta&t=sFNpwvyzcG-pEeZGrJRDSBO11vcnr3ald--Rhhwxmjw"
 			alt="Hamburger Catering" style="width: 100%; height: 100%;">
 		<div class="w3-display-bottommiddle w3-padding-large w3-opacity">
 			<h1 class="w3-xxlarge" style="color: white;">LSC Planning

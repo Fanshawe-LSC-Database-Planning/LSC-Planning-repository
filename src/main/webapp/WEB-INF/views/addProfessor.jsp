@@ -360,7 +360,7 @@ button:hover {
 			});
 		});
 
-<script>
+
 	function clearAllForm() {
 		document.getElementById('firstName').value = '';
 		document.getElementById('lastName').value = '';

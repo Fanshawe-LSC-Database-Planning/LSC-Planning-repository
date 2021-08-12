@@ -36,7 +36,7 @@ body, h1, h2, h3, h4, h5, h6 {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: white;
+	background-color: lightcyan;
 	overflow-x: hidden;
 	padding-top: 60px;
 }
