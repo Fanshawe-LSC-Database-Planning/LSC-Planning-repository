@@ -1,0 +1,2 @@
+# LSC-Planning-repository
+Developed a system for the Fanshawe College to manage and eliminate the manual formatting in the planning of courses and sections and to increase productivity and efficiency of operations and to support, improve, maintain, and eliminate all the incorrect formatting, update as well as enhance features. I worked as the main developer throughout the duration of the capstone project. I worked on generating APIs in the backend and integrating the backend to the front-end through Java Spring Boot, PostgreSQL and JSP.
